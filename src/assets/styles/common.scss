@@ -1,0 +1,68 @@
+@use './vars';
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+}
+
+h1 {
+  font-family: 'Libre Franklin', sans-serif;
+  margin: 0 0 40px;
+}
+
+body {
+  color: vars.$text-color;
+  font-family: 'Libre Baskerville', serif;
+}
+
+@include vars.responsive-small {
+  .container {
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+  }
+}
+
+@include vars.responsive-medium {
+  .container {
+    width: vars.$small-break - 20px;
+  }
+}
+
+@include vars.responsive-large {
+  .container {
+    width: vars.$medium-break - 40px;
+  }
+}
+
+@include vars.responsive-huge {
+  .container {
+    width: vars.$large-break - 60px;
+  }
+}
+
+::placeholder {
+  color: vars.$placeholder-color;
+}
+
+.error {
+  color: vars.$error-color;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+  color: lighten(vars.$avfacts-blue, 30%);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
