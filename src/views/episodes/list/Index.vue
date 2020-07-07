@@ -11,9 +11,9 @@
       <div class="spacer" />
       <input @keyup="updateFilter"
              aria-label="Search episodes"
+             data-cy="filterField"
              placeholder="Find an episode"
-             type="search"
-             v-model.trim="filter" />
+             type="search" />
     </div>
 
     <div v-infinite-scroll:[episodesLoading]="loadEpisodes">
@@ -21,7 +21,9 @@
                :key="episode.number"
                v-for="episode in episodes" />
 
-      <p class="no-episodes" v-if="episodes.length === 0">No episodes yet.</p>
+      <p class="no-episodes" v-if="episodes.length === 0" data-cy="noEpisodes">
+        No episodes yet.
+      </p>
     </div>
 
     <page-loading v-if="episodesLoading" />
@@ -43,8 +45,6 @@
     components: { Episode, PageLoading }
   })
   export default class Index extends Vue {
-    filter: string | null = null
-
     @Getter episodes!: Episode[]
 
     @Getter episodesLoading!: boolean
@@ -57,10 +57,10 @@
 
     @Action setFilter!: (params: { filter: string | null }) => void
 
-    updateFilter = debounce(this._updateFilter)
+    updateFilter = debounce(this._updateFilter).bind(this)
 
-    async _updateFilter(): Promise<void> {
-      await this.setFilter({ filter: this.filter })
+    async _updateFilter(event: Event): Promise<void> {
+      await this.setFilter({ filter: (<HTMLInputElement>event.target).value })
       await this.loadEpisodes({ restart: true })
     }
   }

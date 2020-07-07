@@ -150,7 +150,7 @@
       })
 
       SmartFormBus.$on('success', async (episode: Episode) => {
-        await this.loadEpisodes({restart: true})
+        await this.loadEpisodes({ restart: true })
         this.setEpisode({ episode })
         // this.setEpisodeInEpisodes({ episode })
       })
