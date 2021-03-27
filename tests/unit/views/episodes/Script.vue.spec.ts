@@ -10,7 +10,10 @@ describe('Script.vue', () => {
     it('returns 0 if the script is undefined', () => {
       const vue = shallowMount(Script, {
         localVue: localVue(),
-        store
+        store,
+        mocks: {
+          $route: { params: { id: '123' } }
+        }
       }).vm
       expect(vue.estimatedRunningTime).to.eql(0)
     })

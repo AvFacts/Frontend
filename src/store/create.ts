@@ -1,5 +1,6 @@
-import { ActionContext, ModuleTree, Store } from 'vuex'
-import createLogger from 'vuex/dist/logger'
+import {
+  ActionContext, ModuleTree, Store, createLogger
+} from 'vuex'
 
 import { Err, Ok } from 'ts-results'
 import { has, isNull, isUndefined } from 'lodash-es'

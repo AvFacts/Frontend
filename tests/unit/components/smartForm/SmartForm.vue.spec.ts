@@ -51,9 +51,9 @@ describe('SmartForm.vue', () => {
       await wrapper.vm.save()
       await wrapper.vm.$nextTick()
 
-      expect(spy).to.have.been.calledWith('submit')
-      expect(spy).to.have.been.calledWith('success', { foo: 'bar' })
-      expect(spy).to.have.been.calledWith('complete')
+      expect(spy).to.have.been.calledWith('submit', 'success')
+      expect(spy).to.have.been.calledWith('error', 'submit', { foo: 'bar' })
+      expect(spy).to.have.been.calledWith('complete', 'submit', 'success')
     })
 
     it('handles validation errors', async () => {
@@ -65,12 +65,12 @@ describe('SmartForm.vue', () => {
       await wrapper.vm.save()
       await wrapper.vm.$nextTick()
 
-      expect(spy).to.have.been.calledWith('submit')
-      expect(spy).to.have.been.calledWith('invalid', Sinon.match({
+      expect(spy).to.have.been.calledWith('submit', 'invalid')
+      expect(spy).to.have.been.calledWith('error', 'submit', Sinon.match({
         errors: { foo: ['invalid'] },
         response: Sinon.match.instanceOf(Response)
       }))
-      expect(spy).to.have.been.calledWith('complete')
+      expect(spy).to.have.been.calledWith('complete', 'submit', 'invalid')
     })
 
     it('handles other errors', async () => {
