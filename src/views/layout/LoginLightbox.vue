@@ -11,6 +11,7 @@
              data-cy="usernameField"
              maxlength="50"
              placeholder="Username"
+             aria-label="Username"
              required
              type="text"
              v-focus="true"
@@ -19,6 +20,7 @@
              autocomplete="current-password"
              data-cy="passwordField"
              placeholder="Password"
+             aria-label="Password"
              required
              type="password"
              v-model="password" />
@@ -29,7 +31,7 @@
              value="Log In" />
     </form>
 
-    <p class="error" data-cy="loginError" v-if="sessionError">{{sessionError}}</p>
+    <p class="error" data-cy="loginError" v-if="sessionError">{{ sessionError }}</p>
   </lightbox>
 </template>
 

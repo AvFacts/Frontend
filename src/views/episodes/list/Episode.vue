@@ -1,7 +1,10 @@
 <template>
   <div class="episode" data-cy="episode">
     <div class="image">
-      <img :src="episode.image.preview_url" data-cy="episode-image" v-if="episode.image" />
+      <img :src="episode.image.preview_url"
+           :alt="episode.title"
+           data-cy="episode-image"
+           v-if="episode.image" />
       <div class="image-placeholder" data-cy="image-placeholder" v-else />
     </div>
     <div class="player">

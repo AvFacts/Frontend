@@ -27,7 +27,7 @@
         <label for="episode_published_at">Publish at</label>
         <smart-field field="published_at" type="datetime" />
 
-        <label>&nbsp;</label>
+        <div class="label">&nbsp;</div>
       </div>
     </div>
 

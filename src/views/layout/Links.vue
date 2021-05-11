@@ -28,10 +28,11 @@
 </script>
 
 <style lang="scss" scoped>
+  @use 'sass:color';
   @use '../../assets/styles/vars';
 
   div {
-    background-color: darken(vars.$banner-background-color, 5%);
+    background-color: color.adjust(vars.$banner-background-color, $lightness: -5%);
   }
 
   ul {

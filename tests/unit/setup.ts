@@ -9,6 +9,7 @@ import chaiAsPromised from 'chai-as-promised'
 import Sinon, { SinonSandbox } from 'sinon'
 import { getLocal } from 'mockttp'
 import { createLocalVue } from '@vue/test-utils'
+import 'cross-fetch/polyfill'
 
 chai.use(sinonChai)
 chai.use(chaiAsPromised)

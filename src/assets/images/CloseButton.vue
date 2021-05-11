@@ -42,6 +42,7 @@
 </script>
 
 <style lang="scss" scoped>
+  @use 'sass:color';
   @import '../styles/vars';
 
   path {
@@ -49,10 +50,10 @@
   }
 
   svg:hover path {
-    fill: darken($light-gray, 10%);
+    fill: color.adjust($light-gray, $lightness: -10%);
   }
 
   svg.active path {
-    fill: darken($light-gray, 20%);
+    fill: color.adjust($light-gray, $lightness: -20%);
   }
 </style>

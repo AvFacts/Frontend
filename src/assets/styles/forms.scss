@@ -20,7 +20,7 @@ $field-border-radius: 2px;
   }
 }
 
-label {
+label, .label {
   display: block;
   font-family: 'Libre Franklin', sans-serif;
   font-weight: bold;
@@ -90,7 +90,7 @@ input[type=file] {
   }
 }
 
-label,
+label, .label,
 input[type=text],
 input[type=password],
 input[type=file],

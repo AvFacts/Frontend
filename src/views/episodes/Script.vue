@@ -33,7 +33,7 @@
   import Vue from 'vue'
   import Component from 'vue-class-component'
   import { Action, Getter } from 'vuex-class'
-  import marked from 'marked'
+  import { marked } from 'marked'
 
   import { isUndefined } from 'lodash-es'
   import Error404 from '@/views/error/404.vue'

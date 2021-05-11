@@ -25,9 +25,10 @@
 </script>
 
 <style lang="scss" scoped>
+  @use 'sass:color';
   @import '../styles/vars';
 
   path {
-    fill: lighten($avfacts-blue, 30%);
+    fill: color.adjust($avfacts-blue, $lightness: -30%);
   }
 </style>

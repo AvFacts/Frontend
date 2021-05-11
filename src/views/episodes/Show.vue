@@ -7,7 +7,7 @@
       <p class="published-at">{{episode.published_at | date}}</p>
 
       <div class="summary">
-        <img :src="episode.image.preview_url" class="image" />
+        <img :src="episode.image.preview_url" class="image" :alt="episode.title" />
         <p>{{episode.description}}</p>
       </div>
 
