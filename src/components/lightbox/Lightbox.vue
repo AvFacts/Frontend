@@ -50,17 +50,15 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../../assets/styles/vars';
+  @import "../../assets/styles/vars";
 
   .lightbox {
     background-color: $background-color;
     border-radius: 10px;
-    box-shadow: 1px 1px 15px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 15px 0 rgba(0 0 0 / 50%);
     box-sizing: border-box;
-
     display: table;
     left: 50%;
-
     padding: 20px;
     position: fixed;
     top: 50%;

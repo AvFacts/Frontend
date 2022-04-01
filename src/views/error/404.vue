@@ -15,7 +15,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../assets/styles/vars';
+  @use "../../assets/styles/vars";
 
   p,
   h1 {

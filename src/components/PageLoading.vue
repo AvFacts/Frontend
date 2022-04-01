@@ -146,14 +146,12 @@
 </script>
 
 <style lang="scss" scoped>
-@import '../assets/styles/vars';
+@import "../assets/styles/vars";
 
 .spinner-container {
   align-items: center;
-
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255 255 255 / 80%);
   box-sizing: border-box;
-
   display: flex;
   flex-flow: row nowrap;
   height: 100vh;
@@ -161,7 +159,6 @@
   left: 0;
   position: fixed;
   top: 0;
-
   width: 100vw;
   z-index: $banner-layer - 1;
 }

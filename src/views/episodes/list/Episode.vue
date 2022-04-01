@@ -50,7 +50,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../../assets/styles/vars';
+  @use "../../../assets/styles/vars";
 
   .episode {
     align-items: flex-start;
@@ -89,7 +89,7 @@
 
   p.published-at {
     color: vars.$dark-gray;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     margin-top: 5px;
 
     .permalink-image {

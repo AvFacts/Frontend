@@ -56,19 +56,16 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../assets/styles/vars';
+  @use "../../assets/styles/vars";
 
   footer {
     align-items: flex-start;
-
     background-color: #fff;
     bottom: 0;
     box-sizing: border-box;
-
     display: flex;
     flex-flow: row nowrap;
     left: 0;
-
     padding: 5px 20px;
     position: fixed;
     width: 100%;

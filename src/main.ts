@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Bugsnag from '@bugsnag/js'
+import Bugsnag, { Plugin } from '@bugsnag/js'
 import BugsnagPluginVue from '@bugsnag/plugin-vue'
 import VueRouter from 'vue-router'
 
@@ -24,7 +24,7 @@ import '@/assets/styles/transitions.scss'
 if (process.env.NODE_ENV === 'production') {
   Bugsnag.start({
     apiKey: '8187c8e84c616cb87e02b819c78cdf2b',
-    plugins: [new BugsnagPluginVue(Vue)]
+    plugins: [<Plugin> new BugsnagPluginVue(Vue)]
   })
 
   Vue.config.productionTip = false
@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
 
 Vue.use(VueRouter)
 
-Vue.component('datetime', Datetime)
+Vue.component('date-time', Datetime)
 
 new Vue({
   router,

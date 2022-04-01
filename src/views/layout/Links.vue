@@ -28,8 +28,8 @@
 </script>
 
 <style lang="scss" scoped>
-  @use 'sass:color';
-  @use '../../assets/styles/vars';
+  @use "sass:color";
+  @use "../../assets/styles/vars";
 
   div {
     background-color: color.adjust(vars.$banner-background-color, $lightness: -5%);
@@ -46,14 +46,14 @@
   li {
     color: vars.$background-color;
     flex: 0 0 auto;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     font-size: 14px;
     list-style: none;
     margin: 0;
     padding: 0;
 
     &:not(:last-child)::after {
-      content: '·';
+      content: "·";
       padding: 0 1em;
     }
   }

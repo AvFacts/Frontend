@@ -66,6 +66,7 @@
     }
 
     get estimatedRunningTime(): number {
+      console.log(this.episode)
       if (isUndefined(this.episode?.script)) return 0
       const wordCount = this.episode!.script.split(/\s+/).length
       return Math.round(0.3472 * wordCount + 69.6)
@@ -82,7 +83,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../assets/styles/vars';
+  @use "../../assets/styles/vars";
 
   h1 a {
     font-size: 14px;

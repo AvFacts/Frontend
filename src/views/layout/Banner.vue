@@ -23,7 +23,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../assets/styles/vars';
+  @use "../../assets/styles/vars";
 
   .parent {
     background-color: vars.$banner-background-color;
@@ -48,7 +48,7 @@
       p {
         color: vars.$background-color;
         flex: 0 0 auto;
-        font-family: 'Libre Franklin', sans-serif;
+        font-family: "Libre Franklin", sans-serif;
         font-size: 14px;
       }
 

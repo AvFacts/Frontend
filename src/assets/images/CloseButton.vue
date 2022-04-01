@@ -42,8 +42,8 @@
 </script>
 
 <style lang="scss" scoped>
-  @use 'sass:color';
-  @import '../styles/vars';
+  @use "sass:color";
+  @import "../styles/vars";
 
   path {
     fill: $light-gray;

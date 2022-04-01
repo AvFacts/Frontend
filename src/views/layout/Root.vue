@@ -29,7 +29,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../assets/styles/vars';
+  @use "../../assets/styles/vars";
 
   @include vars.responsive-desktop {
     header {

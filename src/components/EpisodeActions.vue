@@ -69,7 +69,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../assets/styles/vars';
+  @import "../assets/styles/vars";
 
   .actions {
     display: flex;
@@ -91,19 +91,21 @@
 
   span.duration {
     color: $light-gray;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     font-size: 12px;
     margin-left: 0.5em;
   }
 
   a.play-button {
     @include button($avfacts-blue);
+
     box-sizing: border-box;
     display: inline-block;
     height: 24px;
     padding: 4px 0;
     vertical-align: middle;
     width: 30px;
+
     @include responsive-desktop {
       min-width: 30px;
     }

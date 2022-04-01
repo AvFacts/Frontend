@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use './vars';
 
 $label-margin: 5px;
@@ -11,7 +12,7 @@ $field-border-radius: 2px;
   padding: 5px;
 
   &:focus {
-    border-color: lighten(vars.$avfacts-blue, 50%);
+    border-color: color.adjust(vars.$avfacts-blue, $lightness: 50%);
     outline: none;
   }
 
@@ -27,30 +28,24 @@ label, .label {
   margin-bottom: $label-margin;
 }
 
-label.checkbox-label {
-  input {
-    display: inline;
-    margin-bottom: $label-margin/2;
-    margin-right: 5px;
-    vertical-align: middle;
-  }
-}
-
 input,
 select,
 textarea {
   display: block;
 }
 
-input[type=text],
-input[type=password] {
+textarea {
   @include text-field;
+  margin-bottom: 10px;
 }
 
+label, .label,
 input[type=text],
 input[type=password],
-input[type=file] {
-  margin-bottom: 10px;
+input[type=file],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .field-error-pair {
@@ -62,8 +57,24 @@ input[type=file] {
   }
 }
 
-textarea {
+
+label.checkbox-label {
+  input {
+    display: inline;
+    margin-bottom: $label-margin / 2;
+    margin-right: 5px;
+    vertical-align: middle;
+  }
+}
+
+input[type=text],
+input[type=password] {
   @include text-field;
+}
+
+input[type=text],
+input[type=password],
+input[type=file] {
   margin-bottom: 10px;
 }
 
@@ -88,15 +99,6 @@ input[type=file] {
     border: 1px solid vars.$error-color;
     border-radius: $field-border-radius;
   }
-}
-
-label, .label,
-input[type=text],
-input[type=password],
-input[type=file],
-textarea {
-  box-sizing: border-box;
-  width: 100%;
 }
 
 $field-pair-margin: 40px;

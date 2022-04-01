@@ -67,7 +67,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../../assets/styles/vars';
+  @use "../../../assets/styles/vars";
 
   .title-search {
     align-items: baseline;
@@ -128,6 +128,6 @@
   }
 
   p.no-episodes {
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
   }
 </style>

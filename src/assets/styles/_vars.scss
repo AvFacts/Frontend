@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 $avfacts-orange: rgb(210, 100, 82);
 $avfacts-blue: rgb(23, 24, 57);
 $avfacts-white: rgb(243, 234, 242);
@@ -76,7 +78,7 @@ $lightbox-layer: 300;
   @include responsive-desktop { min-width: 50px; }
 
   &:active {
-    background-color: lighten($color, 5%);
+    background-color: color.adjust($color, $lightness: 5%);
     box-shadow: inset 0 39px 0 -24px $color;
   }
 }

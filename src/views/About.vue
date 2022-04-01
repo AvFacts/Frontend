@@ -54,7 +54,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../assets/styles/vars';
+  @use "../assets/styles/vars";
 
   img {
     display: block;

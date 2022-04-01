@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars,@typescript-eslint/no-empty-function,
-    mocha/no-top-level-hooks,mocha/no-exports */
+    mocha/no-top-level-hooks */
 
 import Vue from 'vue'
 import Vuex from 'vuex'
@@ -7,7 +7,7 @@ import chai from 'chai'
 import sinonChai from 'sinon-chai'
 import chaiAsPromised from 'chai-as-promised'
 import Sinon, { SinonSandbox } from 'sinon'
-import { getLocal } from 'mockttp'
+import nock from 'nock'
 import { createLocalVue } from '@vue/test-utils'
 import 'cross-fetch/polyfill'
 
@@ -31,17 +31,16 @@ const localStorage = {
 }
 
 let sandbox: SinonSandbox
-export const mockServer = getLocal()
 
-beforeEach(async () => {
+beforeEach(() => {
   sandbox = Sinon.createSandbox()
   sandbox.replaceGetter(window, 'localStorage', () => localStorage)
-  await mockServer.start(5100)
+  nock.disableNetConnect()
 })
 
-afterEach(async () => {
+afterEach(() => {
   sandbox.restore()
-  await mockServer.stop()
+  // nock.cleanAll()
 })
 
 export function getSandbox(): SinonSandbox {

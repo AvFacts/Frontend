@@ -163,14 +163,14 @@
 
     private refreshScratch(): void {
       this.scratchEpisode = pick(this.episode,
-        ['title', 'subtitle', 'author', 'published_at', 'explicit',
-          'blocked', 'summary', 'description', 'script', 'credits'])
+                                 ['title', 'subtitle', 'author', 'published_at', 'explicit',
+                                  'blocked', 'summary', 'description', 'script', 'credits'])
     }
   }
 </script>
 
 <style lang="scss">
-  @use '../../assets/styles/vars';
+  @use "../../assets/styles/vars";
 
   #episode_description {
     height: 100px;

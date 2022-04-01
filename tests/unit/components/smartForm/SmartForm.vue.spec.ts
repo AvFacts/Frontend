@@ -1,7 +1,8 @@
 import { mount, shallowMount, Wrapper } from '@vue/test-utils'
 import { expect } from 'chai'
 import * as Sinon from 'sinon'
-import { getSandbox, localVue, mockServer } from '../../setup'
+import nock from 'nock'
+import { getSandbox, localVue } from '../../setup'
 import SmartForm from '@/components/smartForm/SmartForm.vue'
 import SmartField from '@/components/smartForm/SmartField.vue'
 import store from '@/store'
@@ -45,7 +46,7 @@ describe('SmartForm.vue', () => {
 
   describe('#save', () => {
     it('submits the form', async () => {
-      await mockServer.post('http://localhost:5100/episodes.json').thenJson(200, { foo: 'bar' })
+      const scope = nock('http://localhost:5100').post('/episodes.json').reply(200, { foo: 'bar' })
       const spy = getSandbox().spy(SmartFormBus, '$emit')
 
       await wrapper.vm.save()
@@ -54,28 +55,34 @@ describe('SmartForm.vue', () => {
       expect(spy).to.have.been.calledWith('submit')
       expect(spy).to.have.been.calledWith('success', { foo: 'bar' })
       expect(spy).to.have.been.calledWith('complete')
+      expect(scope.isDone()).to.be.true
     })
 
     it('handles validation errors', async () => {
-      await mockServer.post('http://localhost:5100/episodes.json').thenJson(422, {
-        errors: { foo: ['invalid'] }
-      })
+      const scope = nock('http://localhost:5100')
+        .post('/episodes.json')
+        .reply(422, { errors: { foo: ['invalid'] } })
       const spy = getSandbox().spy(SmartFormBus, '$emit')
 
       await wrapper.vm.save()
       await wrapper.vm.$nextTick()
 
       expect(spy).to.have.been.calledWith('submit')
-      expect(spy).to.have.been.calledWith('invalid', Sinon.match({
-        errors: { foo: ['invalid'] },
-        response: Sinon.match.instanceOf(Response)
-      }))
+      expect(spy).to.have.been.calledWith(
+        'invalid',
+        Sinon.match({
+          errors: { foo: ['invalid'] },
+          response: Sinon.match.instanceOf(Response)
+        })
+      )
       expect(spy).to.have.been.calledWith('complete')
+      expect(scope.isDone()).to.be.true
     })
 
     it('handles other errors', async () => {
-      await mockServer.post('http://localhost:5100/episodes.json')
-        .thenReply(500, 'Internal Server Error')
+      const scope = nock('http://localhost:5100')
+        .post('/episodes.json')
+        .reply(500, 'Internal Server Error')
       const spy = getSandbox().spy(SmartFormBus, '$emit')
 
       await wrapper.vm.save()
@@ -84,6 +91,7 @@ describe('SmartForm.vue', () => {
       expect(spy).to.have.been.calledWith('submit')
       expect(spy).to.have.been.calledWith('error', Sinon.match.instanceOf(Error))
       expect(spy).to.have.been.calledWith('complete')
+      expect(scope.isDone()).to.be.true
     })
   })
 })

@@ -23,16 +23,14 @@
 </script>
 
 <style lang="scss" scoped>
-  @import '../../assets/styles/vars';
+  @import "../../assets/styles/vars";
 
   .overlay {
-
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0 0 0 / 50%);
     height: 100vh;
     left: 0;
     position: fixed;
     top: 0;
-
     width: 100vw;
     z-index: $lightbox-layer - 1;
   }

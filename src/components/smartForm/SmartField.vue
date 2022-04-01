@@ -21,7 +21,7 @@
       <slot />
     </select>
 
-    <datetime :aria-label="label"
+    <date-time :aria-label="label"
               :auto="true"
               :format="datetimeFormat"
               :phrases="{ok: 'OK', cancel: 'Cancel'}"

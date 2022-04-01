@@ -75,7 +75,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @use '../../assets/styles/vars';
+  @use "../../assets/styles/vars";
 
   h1 {
     margin-bottom: 0;
@@ -83,7 +83,7 @@
 
   p.published-at {
     color: vars.$dark-gray;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: "Libre Franklin", sans-serif;
     font-size: 12px;
     margin-bottom: 40px;
     margin-top: 5px;
