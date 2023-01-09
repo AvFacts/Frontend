@@ -18,7 +18,7 @@
     "@bugsnag/plugin-vue": "^7.16.2",
     "core-js": "^3.21.1",
     "lodash-es": "^4.17.21",
-    "luxon": "^1",
+    "luxon": "^2",
     "marked": "^4.0.12",
     "moment-duration-format": "^2.3.2",
     "normalize.css": "^8.0.1",
