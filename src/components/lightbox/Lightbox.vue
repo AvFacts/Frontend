@@ -1,9 +1,10 @@
 <template>
   <transition name="fade">
-    <div :style="style"
-         class="lightbox"
-         ref="lightbox"
-         v-if="shown">
+    <div
+      :style="style"
+      class="lightbox"
+      ref="lightbox"
+      v-if="shown">
       <slot />
     </div>
   </transition>

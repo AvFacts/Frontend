@@ -133,6 +133,9 @@ const actions: ActionTree<EpisodesState, RootState> = {
 }
 
 const episodes: Module<EpisodesState, RootState> = {
-  state, getters, mutations, actions
+  state,
+  getters,
+  mutations,
+  actions
 }
 export default episodes

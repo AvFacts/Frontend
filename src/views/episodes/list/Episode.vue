@@ -1,10 +1,11 @@
 <template>
   <div class="episode" data-cy="episode">
     <div class="image">
-      <img :src="episode.image.preview_url"
-           :alt="episode.title"
-           data-cy="episode-image"
-           v-if="episode.image" />
+      <img
+        :src="episode.image.preview_url"
+        :alt="episode.title"
+        data-cy="episode-image"
+        v-if="episode.image" />
       <div class="image-placeholder" data-cy="image-placeholder" v-else />
     </div>
     <div class="player">
@@ -12,10 +13,11 @@
 
       <p class="published-at">
         <span v-if="episode.published_at">{{episode.published_at | date}}</span>
-        <router-link :to="{name: 'episodes_show', params: {id: episode.number, slug: episode.slug}}"
-                     aria-label="Permalink"
-                     data-cy="permalink"
-                     v-if="audioProcessed">
+        <router-link
+          :to="{ name: 'episodes_show', params: { id: episode.number, slug: episode.slug } }"
+          aria-label="Permalink"
+          data-cy="permalink"
+          v-if="audioProcessed">
           <permalink :size="10" class="permalink-image" />
         </router-link>
       </p>

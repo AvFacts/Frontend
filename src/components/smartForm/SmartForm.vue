@@ -3,7 +3,7 @@
     <ul class="errors" v-if="errors.base">
       <li :key="index" v-for="(error, index) in errors.base">{{error}}</li>
     </ul>
-    <slot></slot>
+    <slot />
   </form>
 </template>
 

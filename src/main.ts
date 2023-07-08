@@ -15,7 +15,6 @@ import store from './store'
 import Layout from '@/views/Layout.vue'
 
 import 'normalize.css'
-import 'simplemde/dist/simplemde.min.css'
 import '@/assets/styles/fonts.scss'
 import '@/assets/styles/common.scss'
 import '@/assets/styles/forms.scss'

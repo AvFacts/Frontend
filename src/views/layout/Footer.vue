@@ -5,14 +5,16 @@
       rights reserved.
     </p>
     <p class="login">
-      <a @click.prevent="showLoginLightbox"
-         data-cy="loginLink"
-         href="#"
-         v-if="!loggedIn">Log in</a>
-      <a @click.prevent="logOut"
-         data-cy="logoutLink"
-         href="#"
-         v-if="loggedIn">Log out</a>
+      <a
+        @click.prevent="showLoginLightbox"
+        data-cy="loginLink"
+        href="#"
+        v-if="!loggedIn">Log in</a>
+      <a
+        @click.prevent="logOut"
+        data-cy="logoutLink"
+        href="#"
+        v-if="loggedIn">Log out</a>
     </p>
   </footer>
 </template>

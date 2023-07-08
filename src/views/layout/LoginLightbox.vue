@@ -6,29 +6,32 @@
     </header>
 
     <form>
-      <input :class="fieldClass"
-             autocomplete="username"
-             data-cy="usernameField"
-             maxlength="50"
-             placeholder="Username"
-             aria-label="Username"
-             required
-             type="text"
-             v-focus="true"
-             v-model="username" />
-      <input :class="fieldClass"
-             autocomplete="current-password"
-             data-cy="passwordField"
-             placeholder="Password"
-             aria-label="Password"
-             required
-             type="password"
-             v-model="password" />
-      <input @click.prevent="submitCredentials"
-             data-cy="loginSubmit"
-             name="commit"
-             type="submit"
-             value="Log In" />
+      <input
+        :class="fieldClass"
+        autocomplete="username"
+        data-cy="usernameField"
+        maxlength="50"
+        placeholder="Username"
+        aria-label="Username"
+        required
+        type="text"
+        v-focus="true"
+        v-model="username" />
+      <input
+        :class="fieldClass"
+        autocomplete="current-password"
+        data-cy="passwordField"
+        placeholder="Password"
+        aria-label="Password"
+        required
+        type="password"
+        v-model="password" />
+      <input
+        @click.prevent="submitCredentials"
+        data-cy="loginSubmit"
+        name="commit"
+        type="submit"
+        value="Log In" />
     </form>
 
     <p class="error" data-cy="loginError" v-if="sessionError">{{ sessionError }}</p>

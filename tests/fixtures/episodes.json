@@ -1,0 +1,269 @@
+[
+  {
+    "number":       44,
+    "title":        "Turbojets and turbofans",
+    "subtitle":     null,
+    "summary":      "Learn the two common types of jet engines and what makes them different.",
+    "author":       null,
+    "description":  "The jet engine revolutionized air travel in the 1950s, and since then jet engines have only gotten more reliable, more efficient, and more powerful. This is due in part to the switch from turbojets to turbofans. In this episode, I discuss what turbojets and turbofans are, and the important differences between them.",
+    "published_at": "2020-04-21T21:58:33.957Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWXc9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--69855d6a8a019021799edcb6e185e45dfc128dc6/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--d0fb4dac480b3b84d73b41f06584449aff969383/plane-turbine-jet-engine.jpg"
+    },
+    "audio":        {
+      "duration": 645.162063,
+      "size":     170932728,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/fkghjxjo1bwyor98xwmq5lt456un/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    15485431
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/fkghjxjo1bwyor98xwmq5lt456un/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    10323407
+      }
+    }
+  },
+  {
+    "number":       43,
+    "title":        "Carburetors",
+    "subtitle":     null,
+    "summary":      "I discuss why we use carburetors and the different types of carburetors in aircraft engines.",
+    "author":       null,
+    "description":  "What was in auto engines 50 years ago, is in piston aircraft engines today. It’s not always true but it certainly feels true often. Only in the last 30 years or so has carburetion been supplanted by fuel injection in aircraft engines. In this episode I will introduce you to the purpose of carburetors, what they do and how they work, and talk about a few different types of carburetors.",
+    "published_at": "2020-03-01T02:57:31.610Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWW89IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d2bda56207d936080e32aeb34ac7c866daa66b6/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--d0fb4dac480b3b84d73b41f06584449aff969383/Main%20metering%20system.jpg"
+    },
+    "audio":        {
+      "duration": 1106.68,
+      "size":     195600204,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/aslnga58dxj8nuudq46pscrbhsyc/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    26562186
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/aslnga58dxj8nuudq46pscrbhsyc/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    17707771
+      }
+    }
+  },
+  {
+    "number":       42,
+    "title":        "Formation flying and TACFORM",
+    "subtitle":     null,
+    "summary":      "How military aircraft fly in formation, the different types of formations used, and how they deal with contingencies.",
+    "author":       null,
+    "description":  "Flights of military aircraft always fly in formation. Flying in formation offers significant tactical advantages when in a combat area, and helps maintain cohesion of the flight when not. Learn about how military aircraft fly in formation, the different types of formations used, and how they deal with contingencies.",
+    "published_at": "2019-12-31T08:24:43.871Z",
+    "script?":      true,
+    "audio":        {
+      "duration": 1767.161814,
+      "size":     312336754,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/5kqauz97hlkiuj0xjgj3bdqrt7si/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    42413706
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/5kqauz97hlkiuj0xjgj3bdqrt7si/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    28275589
+      }
+    }
+  },
+  {
+    "number":       41,
+    "title":        "Low-frequency radio ranges",
+    "subtitle":     null,
+    "summary":      "I talk about low-frequency radio ranges, a long-dead primitive form of instrument navigation.",
+    "author":       null,
+    "description":  "Low-frequency radio ranges are a simple form of instrument navigation that hasn’t been around since the 1970s. And while it’s comparatively primitive today, it was revolutionary in the 1920s, demonstrating that for the first time airplanes could be navigated by instruments alone. Learn about how LRR stations worked, and how LRR approaches were charted and flown.",
+    "published_at": "2019-11-24T07:59:38.489Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWVE9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c1f63e690c359542973b4bb5d45d3941caad270/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--d0fb4dac480b3b84d73b41f06584449aff969383/LFR-loop.jpg"
+    },
+    "audio":        {
+      "duration": 436.133787,
+      "size":     77084828,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/b4obyd68qn5t8shsutb9179jonx0/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    10468667
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/b4obyd68qn5t8shsutb9179jonx0/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    6978990
+      }
+    }
+  },
+  {
+    "number":       40,
+    "title":        "Types and hazards of icing",
+    "subtitle":     null,
+    "summary":      "Learn about where and why ice forms, and why it’s such a big deal to the pilots who fly through it (and try to avoid it).",
+    "author":       null,
+    "description":  "Ice is nice in cold drinks but can be a real hazard to airplanes. When supercooled water droplets freeze and create ice on the wings, an aircraft can suffer loss of lift and control. Learn about where and why ice forms, and why it’s such a big deal to the pilots who fly through it (and try to avoid it).",
+    "published_at": "2019-10-13T06:10:41.830Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWDQ9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b9324632fdf0457f6b996c6fb20719b22b298a44/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--d0fb4dac480b3b84d73b41f06584449aff969383/Some_Ice_on_the_boots_(1527659244).jpg"
+    },
+    "audio":        {
+      "duration": 624.532789,
+      "size":     110383322,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/alw5dkxm8bfjaxne74n131rfh4iq/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    14990150
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/alw5dkxm8bfjaxne74n131rfh4iq/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    9993497
+      }
+    }
+  },
+  {
+    "number":       39,
+    "title":        "CCIP, CCRP, and other bombing modes",
+    "subtitle":     null,
+    "summary":      "I cover the different ways pilots put dumb bombs on target.",
+    "author":       null,
+    "description":  "Bombing has come a long way from its primitive origins. Today, computers help pilots put bombs exactly where they want them. In this episode I cover some of the different ways that pilots “pickle,” or drop their bombs, and how the HUD and the fire control radar help them, even when dropping dumb bombs.",
+    "published_at": "2019-08-19T05:00:37.552Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBWDA9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1cebed02bccfef2ff28dbb2e4c592a783f967e47/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJU2xCSEJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--e384f939ebb7c6051dd7c00c215be410e5313140/160211-F-PF238-250.JPG"
+    },
+    "audio":        {
+      "duration": 580.0,
+      "size":     102512396,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/i3jmff7jkftzblvln1jc0ekomuom/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    13921846
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/i3jmff7jkftzblvln1jc0ekomuom/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    9280923
+      }
+    }
+  },
+  {
+    "number":       38,
+    "title":        "High-altitude, high-speed aerodynamics",
+    "subtitle":     null,
+    "summary":      "High-altitude, high-speed aerodynamics, including Mach tuck, coffin corner, and Dutch roll.",
+    "author":       null,
+    "description":  "Aircraft that fly high and fast deal with a whole range of aerodynamic issues that lower and slower planes never see. They stem from the shape of the aircraft, the properties of the air at high altitude, and shockwaves caused by approaching the speed of sound. In this episode, I discuss high-altitude, high-speed aerodynamics, including Mach tuck, coffin corner, and Dutch roll.",
+    "published_at": "2019-07-11T03:45:20.492Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBmdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--719194f0f8bd098327d0e45a4acf5b3f5a5040b9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--d0fb4dac480b3b84d73b41f06584449aff969383/960601-F-6300R-041.jpg"
+    },
+    "audio":        {
+      "duration": 1421.04,
+      "size":     251161616,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/Ap99sWcUqECxVVPgUKHo68ny/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    34106767
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/Ap99sWcUqECxVVPgUKHo68ny/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    22737723
+      }
+    }
+  },
+  {
+    "number":       37,
+    "title":        "Airspeed, airspeed, airspeed",
+    "subtitle":     null,
+    "summary":      "I cover the different types of airspeeds, what they all mean, and why they’re important.",
+    "author":       null,
+    "description":  "In aviation, airspeed is life. But it’s also not simple — there are lots of different kinds of airspeed, from indicated airspeed to calibrated airspeed to true airspeed and more. In this episode, I cover the different types of airspeeds, what they all mean, and why they’re important.",
+    "published_at": "2019-06-20T03:19:24.031Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBmUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c4a4e9b4bf9c502b0f746758e0e5c994910d5478/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--d0fb4dac480b3b84d73b41f06584449aff969383/Airspeed_indicator_DC-10.jpg"
+    },
+    "audio":        {
+      "duration": 816.403152,
+      "size":     144295360,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/kypkSKt8nCTjASMeSJBrkHmg/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    19595015
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/kypkSKt8nCTjASMeSJBrkHmg/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    13063361
+      }
+    }
+  },
+  {
+    "number":       36,
+    "title":        "Laser-guided and GPS-guided bombs",
+    "subtitle":     null,
+    "summary":      "I cover some details of laser- and GPS-guided weapons; how they work, tactics, and shortcomings.",
+    "author":       null,
+    "description":  "Bombs are getting smarter every day. In the 1960s, we got the laser-guided bomb, marking the end of the era of indiscriminate bombing of targets. Today we have GPS-guided bombs too, as well as hybrid guidance systems. In this episode, I’ll cover some details of laser- and GPS-guided weapons; how they work, tactics, and shortcomings.",
+    "published_at": "2019-05-16T20:43:18.270Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBmQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6107af9c27362d148fe8d46741bfcdb0dfe210a7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--d0fb4dac480b3b84d73b41f06584449aff969383/Cover%20Art.jpg"
+    },
+    "audio":        {
+      "duration": 739.817188,
+      "size":     130759210,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/t9Py6mBCRX9XZYAmobeQ7p89/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    17757457
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/t9Py6mBCRX9XZYAmobeQ7p89/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    11838332
+      }
+    }
+  },
+  {
+    "number":       35,
+    "title":        "Transoceanic crossings, part 6",
+    "subtitle":     "Cockpit procedures, plotting, and SLOP",
+    "summary":      "Part 6 of 6: I cover gross navigational errors (GNEs), some of the procedures used in the cockpit to mitigate risk, and strategic lateral offsets, or SLOP.",
+    "author":       null,
+    "description":  "This is part 6 of a 6-part series on transoceanic flights. Transoceanic flights date back to Charles Lindbergh’s famous Spirit of St. Louis flight in 1927, but today the world is quite different, with numerous procedures and rules to keep us safe as we fly across the ocean. In part 6, I cover gross navigational errors (GNEs), some of the procedures used in the cockpit to mitigate risk, and strategic lateral offsets, or SLOP.",
+    "published_at": "2019-04-06T01:57:48.737Z",
+    "script?":      true,
+    "image":        {
+      "preview_url": "https://app.avfacts.org/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBiQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1ec25f1f4cac2e540e20e49fea3450d0c244527/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWNocEFjZz0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--35e07cac0acc0ee4c607ad78aa2a8da5789575ed/6.png"
+    },
+    "audio":        {
+      "duration": 470.007823,
+      "size":     83071896,
+      "mp3":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/LZ8PYrar4KDWeLZojq2W5fiE/3155614c931b42cc098016e23d6ad3c360b5a27ead5b8488acdd5871853e7b4d",
+        "content_type": "audio/mpeg",
+        "byte_size":    11281807
+      },
+      "aac":      {
+        "url":          "https://d36jmj7hk1xqok.cloudfront.net/transcoded/LZ8PYrar4KDWeLZojq2W5fiE/49e0443136da0ab7352d5426bb181334f969ca9a078271507aa6305681da8167",
+        "content_type": "audio/aac",
+        "byte_size":    7521037
+      }
+    }
+  }
+]

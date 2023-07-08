@@ -1,37 +1,42 @@
 <template>
   <div data-cy="player" v-if="playOpen">
     <audio controls v-if="audioProcessed">
-      <source :src="episode.audio.aac.url"
-              :type="episode.audio.aac.content_type" />
-      <source :src="episode.audio.mp3.url"
-              :type="episode.audio.mp3.content_type" />
+      <source
+        :src="episode.audio.aac.url"
+        :type="episode.audio.aac.content_type" />
+      <source
+        :src="episode.audio.mp3.url"
+        :type="episode.audio.mp3.content_type" />
     </audio>
   </div>
 
   <div class="actions" v-else>
     <div class="left-actions">
-      <a @click.prevent="play"
-         aria-label="Play"
-         class="play-button"
-         data-cy="playButton"
-         href="#"
-         v-if="audioProcessed">
+      <a
+        @click.prevent="play"
+        aria-label="Play"
+        class="play-button"
+        data-cy="playButton"
+        href="#"
+        v-if="audioProcessed">
         <play :height="16" />
       </a>
       <span class="duration" v-if="audioProcessed">{{episode.audio.duration | duration}}</span>
     </div>
 
     <div class="right-actions">
-      <router-link :to="{name: 'episodes_script', params: {id: episode.number}}"
-                   class="other-button"
-                   data-cy="performButton"
-                   v-if="loggedIn && episode['script?']">
+      <router-link
+        :to="{ name: 'episodes_script', params: { id: episode.number } }"
+        class="other-button"
+        data-cy="performButton"
+        v-if="loggedIn && episode['script?']">
         Perform
       </router-link>
-      <router-link :to="{name: 'episodes_edit', params: {id: episode.number}}"
-                   class="other-button"
-                   data-cy="editButton"
-                   v-if="loggedIn">
+      <router-link
+        :to="{ name: 'episodes_edit', params: { id: episode.number } }"
+        class="other-button"
+        data-cy="editButton"
+        v-if="loggedIn">
         Edit
       </router-link>
     </div>

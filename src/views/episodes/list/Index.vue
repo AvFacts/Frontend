@@ -3,23 +3,26 @@
     <div class="title-search">
       <h1>
         All Episodes
-        <router-link :to="{name: 'episodes_new'}"
-                     data-cy="uploadNewLink"
-                     v-if="loggedIn">Upload New
+        <router-link
+          :to="{ name: 'episodes_new' }"
+          data-cy="uploadNewLink"
+          v-if="loggedIn">Upload New
         </router-link>
       </h1>
       <div class="spacer" />
-      <input @keyup="updateFilter"
-             aria-label="Search episodes"
-             data-cy="filterField"
-             placeholder="Find an episode"
-             type="search" />
+      <input
+        @keyup="updateFilter"
+        aria-label="Search episodes"
+        data-cy="filterField"
+        placeholder="Find an episode"
+        type="search" />
     </div>
 
     <div v-infinite-scroll:[episodesLoading]="loadEpisodes">
-      <episode :episode="episode"
-               :key="episode.number"
-               v-for="episode in episodes" />
+      <episode
+        :episode="episode"
+        :key="episode.number"
+        v-for="episode in episodes" />
 
       <p class="no-episodes" v-if="episodes.length === 0" data-cy="noEpisodes">
         No episodes yet.

@@ -1,8 +1,8 @@
 @use 'sass:color';
 
-$avfacts-orange: rgb(210, 100, 82);
-$avfacts-blue: rgb(23, 24, 57);
-$avfacts-white: rgb(243, 234, 242);
+$avfacts-orange: rgb(210 100 82);
+$avfacts-blue: rgb(23 24 57);
+$avfacts-white: rgb(243 234 242);
 
 $dark-gray: #414854;
 $light-gray: #bbc1cc;
@@ -10,7 +10,7 @@ $light-gray: #bbc1cc;
 $text-color: #000;
 $error-color: #a00;
 $banner-background-color: $avfacts-blue;
-$background-color: rgb(244, 244, 244);
+$background-color: rgb(244 244 244);
 $placeholder-color: $light-gray;
 
 $small-break: 480px;
@@ -58,7 +58,6 @@ $lightbox-layer: 300;
 @mixin button($color, $text-dark: false) {
   background-color: $color;
   border: 0;
-
   border-radius: 5px;
   cursor: pointer;
   display: inline-block;
@@ -67,10 +66,9 @@ $lightbox-layer: 300;
   text-align: center;
   text-decoration: none;
 
-  @if ($text-dark) {
+  @if $text-dark {
     color: #000;
-  }
-  @else {
+  } @else {
     color: $background-color;
     text-shadow: 0 1px 0 #000;
   }

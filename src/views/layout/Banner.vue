@@ -1,13 +1,14 @@
 <template>
   <div class="parent">
     <div class="container">
-      <router-link :to="{name: 'episodes_list'}" data-cy="homeLink">
-        <img src="../../assets/images/banner-image.png"
-             alt="AvFacts: Aviation knowledge without limits" />
+      <router-link :to="{ name: 'episodes_list' }" data-cy="homeLink">
+        <img
+          src="../../assets/images/banner-image.png"
+          alt="AvFacts: Aviation knowledge without limits" />
       </router-link>
       <div class="spacer" />
       <p>an aviation podcast by
-        <router-link :to="{name: 'about'}">Tim Morgan</router-link>
+        <router-link :to="{ name: 'about' }">Tim Morgan</router-link>
       </p>
     </div>
   </div>

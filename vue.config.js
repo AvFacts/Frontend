@@ -42,11 +42,6 @@ module.exports = {
     // speed up first load
     config.plugins.delete('prefetch')
     config.plugin('CompressionPlugin').use(CompressionPlugin)
-
-    // config.plugin('StyleLintPlugin').use(StyleLintPlugin, [
-    //   {
-    //     files: ['src/**/*.{vue,scss}']
-    //   }])
   },
 
   configureWebpack: {

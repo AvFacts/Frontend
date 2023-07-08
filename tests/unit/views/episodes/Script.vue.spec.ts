@@ -1,15 +1,21 @@
 import { shallowMount } from '@vue/test-utils'
 import { expect } from 'chai'
 import { constant, times } from 'lodash-es'
-import nock from 'nock'
+import { rest } from 'msw'
 import { localVue } from '../../setup'
+import backend from '../../backend'
+import episodeJSON from '../../../fixtures/episode.json'
 import Script from '@/views/episodes/Script.vue'
 import store from '@/store'
 
 describe('Script.vue', () => {
   describe('estimatedRunningTime', () => {
     it('returns 0 if the script is undefined', () => {
-      nock('http://localhost:5100').get('/episodes/123.json').reply(200, {})
+      backend.use(
+        rest.get('http://localhost:5100/episodes/123.json', (req, res, ctx) => res(
+          ctx.json({ ...episodeJSON, script: undefined })
+        ))
+      )
 
       const vue = shallowMount(Script, {
         localVue: localVue(),
@@ -23,15 +29,9 @@ describe('Script.vue', () => {
     })
 
     it('returns an estimated running time', () => {
-      nock('http://localhost:5100')
-        .get('/episodes/123.json')
-        .reply(200, {
-          number: 123,
-          script: times(1000, constant('hello')).join(' ')
-        })
       store.commit('SET_EPISODE', {
         episode: {
-          number: 123,
+          number: 1,
           script: times(1000, constant('hello')).join(' ')
         }
       })
@@ -40,7 +40,7 @@ describe('Script.vue', () => {
         localVue: localVue(),
         store,
         mocks: {
-          $route: { params: { id: '123' } }
+          $route: { params: { id: '1' } }
         }
       }).vm
 

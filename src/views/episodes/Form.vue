@@ -1,18 +1,20 @@
 <template>
-  <smart-form :method="method"
-              :object="scratchEpisode"
-              :path="path"
-              objectName="episode">
+  <smart-form
+    :method="method"
+    :object="scratchEpisode"
+    :path="path"
+    objectName="episode">
 
     <page-loading v-if="saving" />
 
     <div class="fieldset">
       <div class="field-pair">
         <label for="episode_title">Title</label>
-        <smart-field :maxlength="255"
-                     :required="true"
-                     data-cy="titleField"
-                     field="title" />
+        <smart-field
+          :maxlength="255"
+          :required="true"
+          data-cy="titleField"
+          field="title" />
 
         <label for="episode_title">Subtitle</label>
         <smart-field :maxlength="255" field="subtitle" />
@@ -20,9 +22,10 @@
 
       <div class="field-pair">
         <label for="episode_author">Author</label>
-        <smart-field :maxlength="255"
-                     :placeholder="channel.author"
-                     field="author" />
+        <smart-field
+          :maxlength="255"
+          :placeholder="channel.author"
+          field="author" />
 
         <label for="episode_published_at">Publish at</label>
         <smart-field field="published_at" type="datetime" />
@@ -46,7 +49,7 @@
           <smart-field data-cy="imageField" field="image" type="file" />
           <p v-if="episode.image">{{episode.image.size |
             bytes}} &middot;
-            <span :class="{'too-small': imageTooSmall}">
+            <span :class="{ 'too-small': imageTooSmall }">
               {{episode.image.width}}&times;{{episode.image.height}}
             </span>
           </p>
@@ -68,11 +71,12 @@
     <smart-field :maxlength="255" field="summary" type="text" />
 
     <label class="below-textarea" for="episode_description">Description</label>
-    <smart-field :maxlength="4000"
-                 :required="true"
-                 data-cy="descriptionField"
-                 field="description"
-                 type="textarea" />
+    <smart-field
+      :maxlength="4000"
+      :required="true"
+      data-cy="descriptionField"
+      field="description"
+      type="textarea" />
 
     <label class="below-textarea" for="episode_credits">Credits</label>
     <smart-field :maxlength="1000" field="credits" type="textarea" />
@@ -81,12 +85,13 @@
     <smart-field field="script" type="markdown" />
 
     <div class="form-actions">
-      <div class="left"></div>
+      <div class="left" />
       <div class="right">
-        <input data-cy="podcastSubmitButton"
-               name="commit"
-               type="submit"
-               value="Save" />
+        <input
+          data-cy="podcastSubmitButton"
+          name="commit"
+          type="submit"
+          value="Save" />
       </div>
     </div>
   </smart-form>
@@ -98,6 +103,7 @@
   import { Prop, Watch } from 'vue-property-decorator'
   import { Action } from 'vuex-class'
   import { isUndefined, pick } from 'lodash-es'
+  // eslint-disable-next-line import/no-unresolved
   import channel from '@/channel/channel.json'
   import { Episode } from '@/types'
   import SmartForm from '@/components/smartForm/SmartForm.vue'
@@ -162,9 +168,11 @@
     }
 
     private refreshScratch(): void {
-      this.scratchEpisode = pick(this.episode,
-                                 ['title', 'subtitle', 'author', 'published_at', 'explicit',
-                                  'blocked', 'summary', 'description', 'script', 'credits'])
+      this.scratchEpisode = pick(
+        this.episode,
+        ['title', 'subtitle', 'author', 'published_at', 'explicit',
+         'blocked', 'summary', 'description', 'script', 'credits']
+      )
     }
   }
 </script>
@@ -176,7 +184,7 @@
     height: 100px;
   }
 
-  form .CodeMirror {
+  form #episode_script {
     height: 400px;
   }
 

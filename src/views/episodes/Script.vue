@@ -8,7 +8,7 @@
   <div class="container" v-else-if="episode">
     <h1>
       #{{episode.number | integer}}: {{episode.title}}
-      <router-link :to="{name: 'episodes_edit', params: {id: episode.number}}">
+      <router-link :to="{ name: 'episodes_edit', params: { id: episode.number } }">
         Back to Edit
       </router-link>
     </h1>
@@ -34,19 +34,18 @@
   import Component from 'vue-class-component'
   import { Action, Getter } from 'vuex-class'
   import { marked } from 'marked'
+  import { markedSmartypants } from 'marked-smartypants'
 
   import { isUndefined } from 'lodash-es'
   import Error404 from '@/views/error/404.vue'
   import PageLoading from '@/components/PageLoading.vue'
   import { Episode } from '@/types'
 
+  marked.use(markedSmartypants())
   marked.setOptions({
     gfm: true,
     breaks: false,
-    pedantic: false,
-    sanitize: true,
-    smartLists: true,
-    smartypants: true
+    pedantic: false
   })
 
   @Component({
@@ -66,7 +65,6 @@
     }
 
     get estimatedRunningTime(): number {
-      console.log(this.episode)
       if (isUndefined(this.episode?.script)) return 0
       const wordCount = this.episode!.script.split(/\s+/).length
       return Math.round(0.3472 * wordCount + 69.6)

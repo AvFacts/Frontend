@@ -1,9 +1,10 @@
 <template>
-  <a @click.prevent="onClose"
-     @mousedown="closeActive = true"
-     @mouseup="closeActive = false"
-     aria-label="Close"
-     href="#">
+  <a
+    @click.prevent="onClose"
+    @mousedown="closeActive = true"
+    @mouseup="closeActive = false"
+    aria-label="Close"
+    href="#">
     <close-button :active="closeActive" />
   </a>
 </template>

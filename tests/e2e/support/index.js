@@ -19,7 +19,6 @@ import './commands'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-before(() => {
+beforeEach(() => {
   cy.request('/cypress/reset')
-  cy.clearLocalStorage()
 })

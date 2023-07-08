@@ -1,73 +1,80 @@
 <template>
   <div class="field-error-pair">
-    <textarea :aria-label="label"
-              :maxlength="maxlength"
-              :placeholder="placeholder"
-              :required="required"
-              @blur="onBlur()"
-              @change="onChange()"
-              @focus="onFocus()"
-              v-bind="commonAttributes"
-              v-if="type === 'textarea'"
-              v-model="buffer" />
+    <textarea
+      :aria-label="label"
+      :maxlength="maxlength"
+      :placeholder="placeholder"
+      :required="required"
+      @blur="onBlur()"
+      @change="onChange()"
+      @focus="onFocus()"
+      v-bind="commonAttributes"
+      v-if="type === 'textarea'"
+      v-model="buffer" />
 
-    <select :aria-label="label"
-            @blur="onBlur()"
-            @change="onChange()"
-            @focus="onFocus()"
-            v-bind="commonAttributes"
-            v-else-if="type === 'select'"
-            v-model="buffer">
+    <select
+      :aria-label="label"
+      @blur="onBlur()"
+      @change="onChange()"
+      @focus="onFocus()"
+      v-bind="commonAttributes"
+      v-else-if="type === 'select'"
+      v-model="buffer">
       <slot />
     </select>
 
-    <date-time :aria-label="label"
-              :auto="true"
-              :format="datetimeFormat"
-              :phrases="{ok: 'OK', cancel: 'Cancel'}"
-              :value-zone="timezone"
-              :zone="timezone"
-              @blur="onBlur()"
-              @change="onChange()"
-              @focus="onFocus()"
-              type="datetime"
-              v-bind="commonAttributes"
-              v-else-if="type === 'datetime'"
-              v-model="buffer" />
+    <date-time
+      :aria-label="label"
+      :auto="true"
+      :format="datetimeFormat"
+      :phrases="{ ok: 'OK', cancel: 'Cancel' }"
+      :value-zone="timezone"
+      :zone="timezone"
+      @blur="onBlur()"
+      @change="onChange()"
+      @focus="onFocus()"
+      type="datetime"
+      v-bind="commonAttributes"
+      v-else-if="type === 'datetime'"
+      v-model="buffer" />
 
-    <textarea :aria-label="label"
-              :maxlength="maxlength"
-              :required="required"
-              @blur="onBlur()"
-              @change="onChange()"
-              @focus="onFocus()"
-              ref="markdownField"
-              v-bind="commonAttributes"
-              v-else-if="type === 'markdown'"
-              v-model="buffer" />
+    <template v-else-if="type === 'markdown'">
+      <input
+        type="hidden"
+        @blur="onBlur()"
+        @change="onChange()"
+        @focus="onFocus()"
+        v-bind="commonAttributes"
+        v-model="buffer" />
 
-    <label class="checkbox-label"
-           v-else-if="type === 'checkbox'">
-      <input :type="type"
-             @blur="onBlur()"
-             @change="onChange()"
-             @focus="onFocus()"
-             v-bind="commonAttributes"
-             v-model="buffer" />
+      <div ref="markdownField" />
+    </template>
+
+    <label
+      class="checkbox-label"
+      v-else-if="type === 'checkbox'">
+      <input
+        :type="type"
+        @blur="onBlur()"
+        @change="onChange()"
+        @focus="onFocus()"
+        v-bind="commonAttributes"
+        v-model="buffer" />
       <slot />
     </label>
 
-    <input :aria-label="label"
-           :maxlength="maxlength"
-           :placeholder="placeholder"
-           :required="required"
-           :type="type"
-           @blur="onBlur()"
-           @change="onChange()"
-           @focus="onFocus()"
-           v-bind="commonAttributes"
-           v-else
-           v-model="buffer" />
+    <input
+      :aria-label="label"
+      :maxlength="maxlength"
+      :placeholder="placeholder"
+      :required="required"
+      :type="type"
+      @blur="onBlur()"
+      @change="onChange()"
+      @focus="onFocus()"
+      v-bind="commonAttributes"
+      v-else
+      v-model="buffer" />
 
     <ul class="errors" v-if="errors.length > 0">
       <li v-for="(error, index) in errors" :key="index">{{error}}</li>
@@ -81,7 +88,7 @@
   import Component from 'vue-class-component'
   import { Prop, Watch } from 'vue-property-decorator'
   import { isNull } from 'lodash-es'
-  import SimpleMDE from 'simplemde'
+  import { Instance, ink } from 'ink-mde'
   import SmartFormBus from './smartFormBus'
   import SmartForm from '@/components/smartForm/SmartForm.vue'
 
@@ -97,7 +104,7 @@
 
     buffer = ''
 
-    MDE: SimpleMDE | null = null
+    MDE: Instance | null = null
 
     @Prop({ type: String, default: 'text' }) type!: string
 
@@ -161,14 +168,11 @@
 
       this.buffer = this.object[this.field]
       this.createMDE()
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore: accessing a private `element` property
-      if (this.MDE) this.MDE.element = this.$refs.markdownField
     }
 
     @Watch('buffer')
     onBufferChanged(): void {
-      if (this.MDE) this.MDE.value(this.buffer)
+      if (this.MDE) this.MDE.update(this.buffer)
       this.onChange()
     }
 
@@ -179,12 +183,14 @@
     private createMDE() {
       if (this.type !== 'markdown') return
       if (this.MDE) return
-      this.MDE = new SimpleMDE({
-        element: this.$refs.markdownField,
-        blockStyles: { italic: '_' },
-        spellChecker: false,
-        status: false,
-        forceSync: true
+
+      this.MDE = ink(this.$refs.markdownField, {
+        doc: this.buffer,
+        hooks: {
+          afterUpdate: (doc: string) => {
+            this.buffer = doc
+          }
+        }
       })
     }
   }

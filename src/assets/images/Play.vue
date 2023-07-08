@@ -1,9 +1,10 @@
 <template>
   <svg :height="height" :width="width" viewBox="0 0 26 28" xmlns="http://www.w3.org/2000/svg">
-    <path :fill="fill"
-          d="M24.1 12.27L3.9.61a2 2 0 0 0-3 1.73v23.32a2 2 0 0 0 3 1.73l20.2-11.66a2 2 0 0 0
+    <path
+      :fill="fill"
+      d="M24.1 12.27L3.9.61a2 2 0 0 0-3 1.73v23.32a2 2 0 0 0 3 1.73l20.2-11.66a2 2 0 0 0
              0-3.46z"
-          fill-rule="nonzero" />
+      fill-rule="nonzero" />
   </svg>
 </template>
 

@@ -36,13 +36,14 @@ textarea {
 
 textarea {
   @include text-field;
+
   margin-bottom: 10px;
 }
 
 label, .label,
-input[type=text],
-input[type=password],
-input[type=file],
+input[type="text"],
+input[type="password"],
+input[type="file"],
 textarea {
   box-sizing: border-box;
   width: 100%;
@@ -67,19 +68,20 @@ label.checkbox-label {
   }
 }
 
-input[type=text],
-input[type=password] {
+input[type="text"],
+input[type="password"] {
   @include text-field;
 }
 
-input[type=text],
-input[type=password],
-input[type=file] {
+input[type="text"],
+input[type="password"],
+input[type="file"] {
   margin-bottom: 10px;
 }
 
-input[type=submit] {
+input[type="submit"] {
   @include vars.button(vars.$avfacts-blue);
+
   appearance: none;
 
   @include  vars.responsive-desktop {
@@ -87,11 +89,12 @@ input[type=submit] {
   }
 }
 
-input[type=file] {
+input[type="file"] {
   padding: 2px;
 
   &::-webkit-file-upload-button {
     @include vars.button(vars.$avfacts-white, $text-dark: true);
+
     appearance: none;
   }
 
@@ -148,7 +151,7 @@ fieldset,
 }
 
 .file-pair {
-  input[type=file],
+  input[type="file"],
   .field-error-pair {
     margin-bottom: 0;
   }

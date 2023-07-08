@@ -55,9 +55,8 @@
     }
 
     mounted(): void {
-      console.log(123)
-      this.loadEpisode({ number: Number(this.$route.params.id) })
-        .then(() => this.checkSlug())
+      this.loadEpisode({ number: Number(this.$route.params.id) }).
+        then(() => this.checkSlug())
     }
 
     private async checkSlug() {

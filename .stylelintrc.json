@@ -1,12 +1,14 @@
 {
   "extends": [
-    "stylelint-config-recommended-scss",
+    "stylelint-config-standard-scss",
     "stylelint-config-recommended-vue/scss"
   ],
-  "rules": {
-    "function-parentheses-space-inside": "never-single-line",
-    "max-nesting-depth": null,
-    "selector-max-id": null,
-    "selector-no-qualifying-type": null
+  "rules":   {
+    "max-nesting-depth":                      null,
+    "selector-id-pattern":                    null,
+    "selector-max-id":                        null,
+    "selector-class-pattern":                 null,
+    "scss/dollar-variable-empty-line-before": null,
+    "at-rule-empty-line-before":              null
   }
 }

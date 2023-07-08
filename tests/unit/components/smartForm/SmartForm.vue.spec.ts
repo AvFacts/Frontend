@@ -1,8 +1,10 @@
 import { mount, shallowMount, Wrapper } from '@vue/test-utils'
 import { expect } from 'chai'
 import * as Sinon from 'sinon'
-import nock from 'nock'
+import { rest } from 'msw'
 import { getSandbox, localVue } from '../../setup'
+import backend from '../../backend'
+import episodeJSON from '../../../fixtures/episode.json'
 import SmartForm from '@/components/smartForm/SmartForm.vue'
 import SmartField from '@/components/smartForm/SmartField.vue'
 import store from '@/store'
@@ -46,22 +48,23 @@ describe('SmartForm.vue', () => {
 
   describe('#save', () => {
     it('submits the form', async () => {
-      const scope = nock('http://localhost:5100').post('/episodes.json').reply(200, { foo: 'bar' })
       const spy = getSandbox().spy(SmartFormBus, '$emit')
 
       await wrapper.vm.save()
       await wrapper.vm.$nextTick()
 
       expect(spy).to.have.been.calledWith('submit')
-      expect(spy).to.have.been.calledWith('success', { foo: 'bar' })
+      expect(spy).to.have.been.calledWith('success', episodeJSON)
       expect(spy).to.have.been.calledWith('complete')
-      expect(scope.isDone()).to.be.true
     })
 
     it('handles validation errors', async () => {
-      const scope = nock('http://localhost:5100')
-        .post('/episodes.json')
-        .reply(422, { errors: { foo: ['invalid'] } })
+      backend.use(
+        rest.post('http://localhost:5100/episodes.json', (req, res, ctx) => res(
+          ctx.status(422),
+          ctx.json({ errors: { foo: ['invalid'] } })
+        ))
+      )
       const spy = getSandbox().spy(SmartFormBus, '$emit')
 
       await wrapper.vm.save()
@@ -76,13 +79,15 @@ describe('SmartForm.vue', () => {
         })
       )
       expect(spy).to.have.been.calledWith('complete')
-      expect(scope.isDone()).to.be.true
     })
 
     it('handles other errors', async () => {
-      const scope = nock('http://localhost:5100')
-        .post('/episodes.json')
-        .reply(500, 'Internal Server Error')
+      backend.use(
+        rest.post('http://localhost:5100/episodes.json', (req, res, ctx) => res(
+          ctx.status(500),
+          ctx.json({ error: true })
+        ))
+      )
       const spy = getSandbox().spy(SmartFormBus, '$emit')
 
       await wrapper.vm.save()
@@ -91,7 +96,6 @@ describe('SmartForm.vue', () => {
       expect(spy).to.have.been.calledWith('submit')
       expect(spy).to.have.been.calledWith('error', Sinon.match.instanceOf(Error))
       expect(spy).to.have.been.calledWith('complete')
-      expect(scope.isDone()).to.be.true
     })
   })
 })
